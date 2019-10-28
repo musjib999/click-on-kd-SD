@@ -29,6 +29,7 @@
 
   <ion-button expand="block" *ngIf="! userID" (click)="save()">Add Student</ion-button>
   <ion-button expand="block" *ngIf="userID" (click)="update()">Update Student</ion-button>
+  <ion-button expand="block" *ngIf="userID" (click)="delete()">Delete Student</ion-button>
   <ion-button expand="block" color="danger" (click)="closeModal()">Close</ion-button>
 
 </ion-content>

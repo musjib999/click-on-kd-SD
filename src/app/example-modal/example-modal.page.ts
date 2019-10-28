@@ -76,6 +76,13 @@ export class ExampleModalPage implements OnInit {
       });
     }
 
+    delete() {
+      this.http.delete('https://click-on-kaduna.herokuapp.com/api/student/' + this.userID).subscribe((response) => {
+        const res:any = response;
+        this.presentAlert(res.message);
+      });
+    }
+
     async presentAlert(msg) {
       const alert = await this.alertController.create({
         header: 'Alert',

@@ -51,13 +51,6 @@ export class HomePage {
     this.openModal();
   }
 
-  delete(id) {
-    this.http.delete('https://click-on-kaduna.herokuapp.com/api/student/' + id).subscribe((response) => {
-      const res:any = response;
-      this.getStudents();
-      this.presentAlert(res.message);
-    });
-  }
 
   async presentAlert(msg) {
     const alert = await this.alertController.create({
